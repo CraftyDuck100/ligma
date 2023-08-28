@@ -1,0 +1,12 @@
+{
+    "name": "Crafty's Crap", 
+    "description": {
+        "english": "Modpack to test Crafty's (probably) working JSONs for his mod", 
+        "german" : "Modpack zum Testen des FD converters"  
+    },
+    "internal_name":"CraftyCrap",
+    "author":"CraftyDuck100",
+    "mod_version":"0.0",
+    "website":"https://github.com/Farlands-Dwelling/Farlands-Dwelling/",
+    "dependencies":[]
+}

@@ -1,0 +1,45 @@
+{
+    "name": "Flame Gem Sword",
+    "sprite": "flamegemsword.png",
+    "shape": ["X",
+              "X",
+              "X"],
+    "rarity": "Legendary",
+    "type": ["Melee", "Weapon"],
+    "supported_characters": ["Purse", "Satchel", "CR8", "Pochette"],
+    "use_costs": {"energy": 1},
+    "animation": "Attack",
+    "combat_effects": [
+      {
+        "trigger": "onUse",
+        "type": "Damage",
+        "value": 7
+      },
+      {
+          "trigger": "onUse",
+          "type": "Burn",
+          "value": 5
+      }
+    ],
+    "modifiers": [
+      {
+        "trigger":"constant",
+        "effects": [{
+            "type": "Burn",
+            "value": {
+                "replace_with": "numOfItems",
+                "multiplier": 2,
+                "check_items": [{
+                    "bph": "FLAME GEM"
+                }],
+                "check_areas": ["adjacent"]
+            }
+        }
+        ]
+    }
+    ],
+  
+    "item_status_effects": [
+      {"type": "canBeForged", "value": 1}
+    ]
+  }

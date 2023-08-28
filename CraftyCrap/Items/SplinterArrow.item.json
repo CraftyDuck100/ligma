@@ -1,0 +1,79 @@
+{
+    "name": "Splinter Arrow",
+    "sprite": "sprite@SplinterArrow.png",
+    "type": [
+        "arrow",
+        "weapon"
+    ],
+    "rarity": "Legendary",
+    "animation": "fireArrow",
+    "shape": [
+        "XXX"
+    ],
+    "combat_effects": [
+        {
+            "trigger": "onUse",
+            "trigger_area": [
+                "Self"
+            ],
+            "type": "damage",
+            "value": 1,
+            "target": "enemy"
+        }
+    ],
+    "modifiers": [
+        {
+            "mod_types": [
+                "any"
+            ],
+			"mod_area": ["self"],
+            "mod_distance": "all",
+            "length": "whileActive",
+            "mod_length": "whileActive",
+            "stackable": true,
+            "trigger": "constant",
+            "trigger_area": [
+                "rightrotational"
+            ],
+            "trigger_on_type": [
+                "GridEmpty"
+            ],
+            "effects": [
+                {
+                    "type": "damage",
+                    "value": 1,
+                    "target": "enemy"
+                }
+            ]
+        }
+    ],
+    "add_modifiers": [
+        {
+            "trigger": "constant",
+			"trigger_area": ["rightrotational"],
+            "trigger_on_type": ["GridEmpty"],
+			"addmod_area": ["self"],
+            "addmod_types": ["any"],
+			"stackable": true,
+            "modifier": {
+                "length": "whileActive",
+                "mod_length": "whileactive",
+                "trigger": "onUse",
+                "effects": [
+                    {
+                        "type": "damage",
+                        "value": 1,
+						"target":"enemy"
+                    }
+                ]
+            }
+        }
+    ],
+    "item_status_effects": [
+        {
+            "type": "canBeForged",
+            "value": 2,
+            "length": "permanent"
+        }
+    ]
+}

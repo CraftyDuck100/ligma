@@ -1,0 +1,74 @@
+{
+    "name": "Bowgun",
+    "sprite": "sprite@Bowgun.png",
+    "type": [
+        "bow",
+        "weapon"
+    ],
+    "rarity": "Legendary",
+    "animation": "fireArrow",
+    "shape": [
+        "XX"
+    ],
+    "use_costs": {
+        "Energy": 1
+    },
+    "modifiers": [
+        {
+            "mod_area": [
+                "bottomrotation"
+            ],
+            "mod_types": [
+                "arrow"
+            ],
+            "mod_distance": "closest",
+            "length": "whileActive",
+            "mod_length": "permanent",
+            "stackable": false,
+            "trigger": "onUse",
+            "trigger_area": [
+                "Self"
+            ],
+            "effects": [
+                {
+                    "type": "activate",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "mod_area": [
+                "bottomrotation"
+            ],
+            "mod_types": [
+                "arrow"
+            ],
+            "mod_distance": "closest",
+            "length": "whileActive",
+            "mod_length": "permanent",
+            "stackable": true,
+            "trigger": "constant",
+            "trigger_area": [
+                "rightrotational"
+            ],
+            "trigger_on_type": [
+                "grid"
+            ],
+            "effects": [
+                {
+                    "type": "damage",
+                    "value": 0.1,
+                    "target": "enemy",
+                    "math": "mul"
+                }
+            ]
+        }
+    ],
+    "item_status_effects": [
+        {
+            "type": "canBeForged",
+            "value": 2,
+            "length": "permanent"
+        }
+    ]
+}
